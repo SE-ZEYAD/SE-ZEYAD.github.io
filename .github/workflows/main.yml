@@ -11,6 +11,11 @@ jobs:
     
     steps: 
       - name: Print a  welcome message
-        run: |
-          echo "Hello Zeyad 😘"
-          echo "Welcome to our first GitHub Actions WorkFlow (CI/CD)"
+        run: echo "Welcome to our first GitHub Actions WorkFlow (CI/CD)"
+        
+      - name: Checkout repository
+        uses: actions/checkout@v5.0.0
+        
+      - name: List repository files 
+        run: ls -la
+      
